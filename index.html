@@ -34,43 +34,56 @@
 					Fiona Kuang<br />
 				</p>
 			</div>
-			<a href="#two" class="more scrolly">Pictures</a>
+			<a href="#one" class="more scrolly">Pictures</a>
 		</section>
 
 		<!-- One -->
 
 		<!-- Two -->
-		<section id="two" class="wrapper style3 special">
+		<section id="one" class="wrapper style3 special">
 			<div class="inner">
 				<header class="major">
-					<h2>Initial Robot Prototype</h2>
+					<h2>Initial Robot Prototype Pictures</h2>
 				</header>
+				<p>Parts: Arduino Mega 2560, chassis given by class, 2 motors, 2 wheels
+					, jumper wires, breadboards, 7 photoresistors, 7 resistors, 4 potentiometers,
+					motot shield, cardboard (for makeshift light shield and shelf), and lots of tape.
+					<br /> Assembly: While building our prototype one of the biggest issues was finding 
+					a place for all of the different components. This was especially hard since the chassis
+					we designed wasn't ready yet, so we had to make the part we added to the chassis with tape.
+					Another issue we came into was the jumper wires, as they went all of the place and sometimes
+					dragged on the floor. The jumper wires to connect the photoresistors were the hardest to deal with
+					because the breadboard for the photoresistors has to face down, so the wire would just stick out.
+					We were able to fix this in the final robot by soldering the wires, so the wires could connect 
+					from the top and the photoresistors from the bottom.
+				</p>
+				
 				<div class="image-container">
 					<div class="image-wrapper">
-						<img src="images/angleview.png" alt="1" />
+						<img src="images/top.png" alt="1" />
 					</div>
 					<div class="image-wrapper">
-						<img src="images/frontview.png" alt="2" />
+						<img src="images/angle.png" alt="2" />
 					</div>
 					<div class="image-wrapper">
-						<img src="images/sideview.png" alt="3" />
+						<img src="images/side.png" alt="3" />
 					</div>
 					<div class="image-wrapper">
-						<img src="images/topview.png" alt="4" />
+						<img src="images/front.png" alt="4" />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="four" class="wrapper style1 special">
+		<section id="two" class="wrapper style1 special">
 			<div class="inner">
 				<header class="major">
-					<h2>Video</h2>
+					<h2>Video of Robot Following Line</h2>
 				</header>
 				<video width="500" height="300" controls="controls" preload="none"
 					onclick="this.play();arguments[0].preventDefault();">
-					<source src="images/followline.mp4" type="video/mp4">
-					<source src="images/followline.mp4" type="video/ogg">
+					<source src="images/followingline.mp4" type="video/mp4">
+					<source src="images/followingline.mp4" type="video/ogg">
 					Your browser does not support the video tag.
 				</video>
 				
@@ -80,11 +93,50 @@
 			</div>
 		</section>
 
-		<section class="spotlight">
-			<div class="image"><img src="images/pic01.jpg" alt="" /></div>
-			<div class="content">
-				<h2>Final Robot</h2>
-				<p>Description</p>
+		<section id="three" class="wrapper style3 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Videos of Robot Competition Day</h2>
+				</header>
+				<div class="video-container">
+					<video controls="controls" preload="none" onclick="this.play();arguments[0].preventDefault();">
+						<source src="images/circuitloop.mp4" type="video/mp4">
+						<source src="images/circuitloop.mp4" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+					<video controls="controls" preload="none" onclick="this.play();arguments[0].preventDefault();">
+						<source src="images/frequencysweep.mp4" type="video/mp4">
+						<source src="images/frequencysweep.mp4" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+					<video controls="controls" preload="none" onclick="this.play();arguments[0].preventDefault();">
+						<source src="images/dragrace.mp4" type="video/mp4">
+						<source src="images/dragrace.mp4" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
+		</section>
+
+		<section id="three" class="wrapper style4 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Final Robot Pictures</h2>
+				</header>
+				<div class="image-container">
+					<div class="image-wrapper">
+						<img src="images/sideannotated.png" alt="1" width="500" height="500" />
+					</div>
+					<div class="image-wrapper">
+						<img src="images/topannotated.png" alt="2" />
+					</div>
+					<div class="image-wrapper">
+						<img src="images/backannotated.png" width="500" height="500"/>
+					</div>
+					<div class="image-wrapper">
+						<img src="images/bottomannotated.png"/>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -92,13 +144,34 @@
 			<div class="inner">
 				<header class="major">
 					<h2>PID Control</h2>
-					<p>Explanations</p>
+					<p>Our default PID values were:
+						<br /> S = 8
+						<br /> P = 30
+						<br /> I = 0
+						<br /> D = 18
+						<br /> We chose these values because it allowed for the
+						right amount of speed, our nominal speed was very high,
+						while also allowing the robot to turn a little to ensure
+						that it can notice changes in the track.
+						<br /> These values changed
+						with each track depending on how many twists and turns there
+						were and how important speed was for the ranking. For example,
+						our speed for the frequency sweep was set to alomst 0
+						if not 0 because speed wasn't required for this track.
+						We also increased P and D for this track because of the sharp
+						turns it had to complete. This was also the case for the
+						circuit loop since it also had sharp turns as well. On
+						the other hand, for the drag race there were barely any twists
+						and turns so our P and D values could be very close to 0
+						and our speed was able to be maxed out to allow the robot
+						to go faster.
+					</p>
 				</header>
 			</div>
 		</section>
 
 		<section class="spotlight">
-			<div class="image"><img src="images/pic03.jpg" alt="" /></div>
+			<div class="image"><img src="images/poster.png" alt="" /></div>
 			<div class="content">
 				<h2>Poster</h2>
 			</div>
@@ -106,7 +179,7 @@
 		</section>
 
 		<section class="spotlight">
-			<div class="image"><img src="images/pic02.jpg" alt="" /></div>
+			<div class="image"><img src="images/teampicture.png" alt="" /></div>
 			<div class="content">
 				<h2>Team Picture</h2>
 			</div>
@@ -116,7 +189,17 @@
 			<div class="inner">
 				<header class="major">
 					<h2>Improvements</h2>
-					<p>Description</p>
+					<p>Some improvements we could have made was having a better
+						chassis that had more support for the shelf. A few days
+						before the final competition the shelf part of our chassis
+						snapped and even though we we able to put it back together
+						with tape it still interfered with the wheels, causing the
+						wheel to fall off at times. Another improvement that could
+						have been made is have a better error calculating algorithm.
+						Our robot was able to do well in the drag race, but when it came
+						to making sharp turns the robot failed to calculate how much it should
+						turn to continue to follow the line. This severely affected our performance
+						in the frequency sweep and the circuit loop.</p>
 				</header>
 			</div>
 		</section>
@@ -129,23 +212,23 @@
 				<ul class="features">
 					<li>
 						<h3>Drag Race</h3>
-						<p>Time - <br />
-							Rank -
+						<p>Time - 9.88 seconds<br />
+							Rank - 5
 						</p>
 					</li>
 
 					<li>
 						<h3>Frequency Sweep</h3>
-						<p>Distance - <br />
-							Time - <br />
-							Rank -
+						<p>Distance - 3 - 3.75<br />
+							Time - 3.73<br />
+							Rank - 12
 						</p>
 					</li>
 
 					<li>
 						<h3>Loop</h3>
-						<p>Number of Loops - <br />
-							Rank -
+						<p>Number of Loops - 5 <br />
+							Rank - 9
 						</p>
 					</li>
 
